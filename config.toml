@@ -1,6 +1,6 @@
-baseURL = "https://ida-mdc.github.io/workshop-visualization"
+baseURL = "https://ida-mdc.gitlab.io/workshops/helmholtz-imaging-solutions"
 languageCode = "en-us"
-title = "3D Data Visualization Workshop"
+title = "Helmholtz Imaging Solutions"
 theme = "hugo-theme-helmholtz-imaging-workshop"
 [markup.goldmark.renderer]
 unsafe= true
