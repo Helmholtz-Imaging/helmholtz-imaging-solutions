@@ -1,0 +1,45 @@
+name: GitHub Pages Deployment
+
+on:
+  push:
+    branches:
+      - main  # Triggers the workflow on pushes to the main branch
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest  # Use GitHub-hosted runner
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true  # Include if using submodules
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install Python Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install packaging
+
+      - name: Run Build Script
+        run: python3 ./build.py
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.111.3'  # Match the Hugo version used in GitLab
+          extended: false
+
+      - name: Build Site
+        run: hugo --minify
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
