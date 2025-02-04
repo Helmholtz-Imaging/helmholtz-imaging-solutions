@@ -1,4 +1,4 @@
-baseURL = "https://ida-mdc.gitlab.io/workshops/helmholtz-imaging-solutions"
+baseURL = "https://helmholtz-imaging.github.io/helmholtz-imaging-solutions"
 languageCode = "en-us"
 title = "Helmholtz Imaging Solutions"
 theme = "hugo-theme-helmholtz-imaging-workshop"
