@@ -155,8 +155,6 @@ Documenting methodologies and sharing best practices is vital for advancing imag
 replication and validation.
 {{< /notes >}}
 
-### Where to publish
-
 {{<repository-table>}}
 
 | **Repository**          | **Advantages**                                       |
