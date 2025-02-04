@@ -1,0 +1,199 @@
+<!-- File: layouts/shortcodes/connect-solutions.html -->
+
+<div class="connect-solutions-container">
+  <p>Total Solutions: <span id="total-solutions">Loading...</span></p>
+  <p>Solutions from Helmholtz Imaging Projects: <span id="solutions-in-projects">Loading...</span></p>
+  <div class="highlighted-solutions">
+    <h3>Example Solutions</h3>
+    <ul id="highlighted-solutions-list">
+      <!-- Highlighted solutions will be injected here -->
+    </ul>
+  </div>
+</div>
+
+<script>
+  (async function() {
+    // Base URLs for the CONNECT API and website
+    const API_BASE_URL = 'https://connect.helmholtz-imaging.de/api/v1';
+    const CONNECT_BASE_URL = 'https://connect.helmholtz-imaging.de';
+
+    // Parse comma-separated IDs from shortcode parameter 'highlights'
+    const highlightsParam = "32,60,19"; // e.g., "64,65,66"
+    const highlightIds = highlightsParam.split(',').map(id => id.trim()).filter(id => id !== '');
+
+    // Elements to populate
+    const totalSolutionsElem = document.getElementById('total-solutions');
+    const solutionsInProjectsElem = document.getElementById('solutions-in-projects');
+    const highlightedSolutionsList = document.getElementById('highlighted-solutions-list');
+
+    /**
+     * Fetches the total number of solutions from the /solution/ endpoint.
+     */
+    async function fetchTotalSolutions() {
+      try {
+        const response = await fetch(`${API_BASE_URL}/solution/`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        // Assuming the API returns an array of solutions
+        // If the API provides a 'count' field, adjust accordingly
+        if (Array.isArray(data)) {
+          totalSolutionsElem.textContent = data.length;
+        } else if (data.count !== undefined) {
+          totalSolutionsElem.textContent = data.count;
+        } else {
+          totalSolutionsElem.textContent = 'Unavailable';
+        }
+      } catch (error) {
+        console.error('Error fetching total solutions:', error);
+        totalSolutionsElem.textContent = 'Unavailable';
+      }
+    }
+
+    /**
+     * Fetches all projects and counts the total number of solutions within projects.
+     * Handles pagination by recursively fetching pages until there are no more.
+     */
+    async function fetchSolutionsInProjects() {
+      let totalSolutionsInProjects = 0;
+      let nextPageUrl = `${API_BASE_URL}/project/?page=1`;
+
+      try {
+        while (nextPageUrl) {
+          const response = await fetch(nextPageUrl);
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          const data = await response.json();
+
+          if (Array.isArray(data.results)) {
+            data.results.forEach(project => {
+              if (Array.isArray(project.solutions)) {
+                totalSolutionsInProjects += project.solutions.length;
+              }
+            });
+          }
+
+          // Determine if there's a next page
+          // The API provides 'next' as a full URL; ensure it's HTTPS
+          if (data.next) {
+            // Replace 'http' with 'https' if necessary
+            nextPageUrl = data.next.replace(/^http:/, 'https:');
+          } else {
+            nextPageUrl = null;
+          }
+        }
+
+        solutionsInProjectsElem.textContent = totalSolutionsInProjects;
+      } catch (error) {
+        console.error('Error fetching solutions in projects:', error);
+        solutionsInProjectsElem.textContent = 'Unavailable';
+      }
+    }
+
+    /**
+     * Fetches and displays highlighted solutions based on provided IDs.
+     */
+    async function fetchHighlightedSolutions() {
+      if (highlightIds.length === 0) {
+        highlightedSolutionsList.innerHTML = '<li>No solution IDs provided.</li>';
+        return;
+      }
+
+      for (let i = 0; i < highlightIds.length; i++) {
+        const id = highlightIds[i];
+        const li = document.createElement('li');
+        highlightedSolutionsList.appendChild(li);
+
+        if (!id) {
+          li.textContent = 'No ID Provided';
+          continue;
+        }
+
+        try {
+          const response = await fetch(`${API_BASE_URL}/solution/${encodeURIComponent(id)}`);
+          if (!response.ok) {
+            if (response.status === 404) {
+              throw new Error('Solution not found');
+            } else {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+          }
+          const data = await response.json();
+
+          // Updated innerHTML assignment
+          li.innerHTML = `
+            <a href="${CONNECT_BASE_URL}${data.connect_link}" class="solution-box">
+              ${data.image ? `<img src="${data.image}" alt="${data.name} Image" class="solution-image">` : ''}
+              <div class="solution-content">
+                <strong>${data.name}</strong><br>
+                ${data.html_description}<br>
+                <em>Authors: ${data.authors ? data.authors : 'N/A'}</em>
+              </div>
+            </a>
+          `;
+          li.classList.add('highlighted');
+        } catch (error) {
+          console.error(`Error fetching solution ID ${id}:`, error);
+          if (error.message === 'Solution not found') {
+            li.textContent = `Solution with ID ${id} not found.`;
+          } else {
+            li.textContent = `Error loading solution ID ${id}.`;
+          }
+        }
+      }
+    }
+
+    // Initialize fetching
+    await fetchTotalSolutions();
+    await fetchSolutionsInProjects();
+    await fetchHighlightedSolutions();
+  })();
+</script>
+
+<style>
+  .connect-solutions-container p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  .highlighted-solutions {
+  }
+  .highlighted-solutions h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .highlighted-solutions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  .highlighted-solutions li {
+    flex: 1;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .solution-box {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: flex-start;
+  }
+  .scroll .solution-image, .slides .solution-image {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 15px;
+    border-radius: 4px;
+  }
+  .solution-content {
+    flex: 1;
+    font-size: 90%;
+  }
+  .solution-content p {
+    max-height: 200px;
+    overflow: hidden;
+  }
+</style>
