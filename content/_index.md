@@ -43,63 +43,8 @@ Solutions are puzzle pieces to successful scientific stories along the imaging p
 
 
 ## Where to upload your resources
-### Software
 
-{{<repository-table category="software">}}
-
----
-
-## Where to upload your resources
-### Image Datasets Across Domains
-{{<repository-table category="image_datasets_across_domains" >}}
-
----
-
-## Where to upload your resources
-### Image Datasets in Health
-
-{{<repository-table category="image_datasets_health">}}
-
----
-
-## Where to upload your resources
-### Image Datasets in Earth & Environment
-
-{{<repository-table category="image_datasets_earth_environment">}}
-
----
-
-## Where to upload your resources
-### Image Datasets in Energy
-
-{{<repository-table category="image_datasets_energy">}}
-
----
-
-## Where to upload your resources
-### Image Datasets in Aeronautics, Space, and Transport
-
-{{<repository-table category="image_datasets_aeronautics_space_transport">}}
-
----
-
-## Where to upload your resources
-### Image Datasets in Matter
-
-{{<repository-table category="image_datasets_matter">}}
-
----
-
-## Where to upload your resources
-### White Papers and Protocols
-
-{{< notes >}}
-Documenting methodologies and sharing best practices is vital for advancing imaging science. 
-**White Papers** contribute to scientific knowledge and best practices. **Protocols** provide detailed methods for 
-replication and validation.
-{{< /notes >}}
-
-{{<repository-table category="white_papers_protocols">}}
+{{< tutorial-link link="repositories" >}}
 
 ---
 
