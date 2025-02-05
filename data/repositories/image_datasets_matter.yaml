@@ -1,0 +1,14 @@
+repositories:
+  - name: "Materials Data Facility (MDF)"
+    url: "https://www.materialsdatafacility.org/"
+    advantages:
+      - "Specialized for materials science data."
+      - "Supports large-scale data uploads."
+      - "Facilitates data sharing and collaboration."
+
+  - name: "NanoHub"
+    url: "https://nanohub.org/"
+    advantages:
+      - "Dedicated to nanotechnology data."
+      - "Supports simulation and experimental data uploads."
+      - "Provides computational tools for data analysis."

@@ -45,104 +45,48 @@ Solutions are puzzle pieces to successful scientific stories along the imaging p
 ## Where to upload your resources
 ### Software
 
-{{<repository-table>}}
-
-| **Repository**                                         | **Advantages**                                         |
-|-------------------------------------------------------------------|--------------------------------------------------------|
-| [**Helmholtz Codebase**](https://gitlab.hzdr.de/)                                 | - Gitlab instance available for anyone with a Helmholtz Center Login. |
-| [**GitLab**](https://gitlab.com/)                                 | - Built-in CI/CD pipelines.<br>- Comprehensive project management.<br>- Supports self-hosting. |
-| [**GitHub**](https://github.com/)                                 | - Largest developer community.<br>- Easy collaboration.<br>- Integration with Zenodo for DOIs. |
-| [**Zenodo**](https://zenodo.org/)                                 | - Free archival with DOI assignment.<br>- Integrates with GitHub.<br>- Open access to datasets and software. |
-| [**SourceForge**](https://sourceforge.net/)                       | - Established platform for open-source.<br>- Project management tools.<br>- Wide visibility for research projects. |
-
-{{</repository-table>}}
+{{<repository-table category="software">}}
 
 ---
 
 ## Where to upload your resources
 ### Image Datasets Across Domains
-{{<repository-table>}}
-
-| **Repository**                                      | **Advantages**                                                                                          |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**InfiniteSpace / dCache**](https://hifis.net/doc/cloud-services/Storage_DESY/)         | - Unlimited storage for projects within Helmholtz.<br>-Access through Helmholtz ID.<br>- Data HTTP - streamable.  |
-| [**Kaggle Datasets**](https://www.kaggle.com/datasets)         | - Diverse datasets across disciplines.<br>- Active community and competitions.<br>- User-friendly tools. |
-| [**Open Science Framework (OSF)**](https://osf.io/)           | - Multidisciplinary support.<br>- Collaboration and project management.<br>- Promotes open access.      |
-| [**Open Images Dataset**](https://storage.googleapis.com/openimages/web/index.html) | - Millions of annotated images.<br>- Rich annotations (bounding boxes, segmentation).<br>- Regular updates. |
-| [**Figshare**](https://figshare.com/)                           | - Supports various data types.<br>- Easy sharing with privacy options.<br>- DOI for citation.           |
-| [**Zenodo**](https://zenodo.org/)                               | - Free and open access.<br>- GitHub integration.<br>- Assigns DOIs for datasets.                       |
-
-{{</repository-table>}}
+{{<repository-table category="image_datasets_across_domains" >}}
 
 ---
 
 ## Where to upload your resources
 ### Image Datasets in Health
 
-{{<repository-table>}}
-
-| **Repository**                                      | **Advantages**                                                                                          |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**The Cancer Imaging Archive (TCIA)**](https://www.cancerimagingarchive.net/) | - Extensive cancer-related images.<br>- High-quality annotations.<br>- Supports clinical research.       |
-| [**BioImage Archive**](https://www.ebi.ac.uk/bioimage-archive/) | - Focused on biological images.<br>- Standardized data formats.<br>- Integrates with EBI resources.     |
-| [**ICPSR**](https://www.icpsr.umich.edu/web/pages/) | - Extensive health and social science data.<br>- Secure data submission with access controls.<br>- Comprehensive metadata support. |
-| [**BioStudies**](https://www.ebi.ac.uk/biostudies/) | - Focused on biological and medical research.<br>- Integrates with other EBI resources.<br>- Supports a wide range of data types. |
-
-{{</repository-table>}}
+{{<repository-table category="image_datasets_health">}}
 
 ---
 
 ## Where to upload your resources
 ### Image Datasets in Earth & Environment
 
-{{<repository-table>}}
-
-| **Repository**                                      | **Advantages**                                                                                          |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**PANGAEA**](https://www.pangaea.de/)               | - Specialized for georeferenced data.<br>- Long-term data preservation.<br>- Comprehensive metadata standards. |
-| [**Earthdata**](https://earthdata.nasa.gov/)         | - Integration with NASA’s Earth observation data.<br>- Scalable storage solutions.<br>- Robust data validation tools. |
-| [**GBIF**](https://www.gbif.org/)                    | - Focused on biodiversity data.<br>- Global accessibility.<br>- Supports large-scale data submissions. |
-
-{{</repository-table>}}
+{{<repository-table category="image_datasets_earth_environment">}}
 
 ---
 
 ## Where to upload your resources
 ### Image Datasets in Energy
 
-{{<repository-table>}}
-
-| **Repository**                                      | **Advantages**                                                                                          |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**OpenEI**](https://openei.org/)                 | - Focused on renewable energy data.<br>- Collaborative platform with community contributions.<br>- Integration with energy modeling tools. |
-| [**International Energy Agency (IEA) Data**](https://www.iea.org/data-and-statistics) | - Comprehensive energy statistics.<br>- High-quality data curation.<br>- Facilitates policy-relevant research. |
-{{</repository-table>}}
+{{<repository-table category="image_datasets_energy">}}
 
 ---
 
 ## Where to upload your resources
-### Image Datasets in Aeronautics & Space
+### Image Datasets in Aeronautics, Space, and Transport
 
-{{<repository-table>}}
-
-| **Repository**                                      | **Advantages**                                                                                          |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**NASA's Planetary Data System (PDS)**](https://pds.nasa.gov/) | - Specialized for planetary science data.<br>- Robust data archiving and curation.<br>- Ensures data accessibility for future research. |
-| [**OpenSky Network**](https://opensky-network.org/)   | - Specialized for aviation data.<br>- Real-time and historical flight data.<br>- Facilitates research in air traffic management and safety. |
-{{</repository-table>}}
+{{<repository-table category="image_datasets_aeronautics_space_transport">}}
 
 ---
 
 ## Where to upload your resources
 ### Image Datasets in Matter
 
-{{<repository-table>}}
-
-| **Repository**                                      | **Advantages**                                                                                          |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**Materials Data Facility (MDF)**](https://www.materialsdatafacility.org/) | - Specialized for materials science data.<br>- Supports large-scale data uploads.<br>- Facilitates data sharing and collaboration. |
-| [**NanoHub**](https://nanohub.org/)               | - Dedicated to nanotechnology data.<br>- Supports simulation and experimental data uploads.<br>- Provides computational tools for data analysis. |
-{{</repository-table>}}
+{{<repository-table category="image_datasets_matter">}}
 
 ---
 
@@ -155,15 +99,7 @@ Documenting methodologies and sharing best practices is vital for advancing imag
 replication and validation.
 {{< /notes >}}
 
-{{<repository-table>}}
-
-| **Repository**          | **Advantages**                                       |
-|------------------------------------|------------------------------------------------------|
-| [**arXiv**](https://arxiv.org/)     | - Widely recognized preprint server.<br>- Covers multiple disciplines.<br>- Fast dissemination of research. |
-| [**bioRxiv**](https://www.biorxiv.org/) | - Focused on biological sciences.<br>- Enhances visibility within the biology community.<br>- Rapid publication process. |
-| [**protocols.io**](https://www.protocols.io/) | - Specialized for research protocols.<br>- Easy version control.<br>- Community feedback and sharing. |
-
-{{</repository-table>}}
+{{<repository-table category="white_papers_protocols">}}
 
 ---
 

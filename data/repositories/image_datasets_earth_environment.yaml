@@ -1,0 +1,21 @@
+repositories:
+  - name: "PANGAEA"
+    url: "https://www.pangaea.de/"
+    advantages:
+      - "Specialized for georeferenced data."
+      - "Long-term data preservation."
+      - "Comprehensive metadata standards."
+
+  - name: "Earthdata"
+    url: "https://earthdata.nasa.gov/"
+    advantages:
+      - "Integration with NASA’s Earth observation data."
+      - "Scalable storage solutions."
+      - "Robust data validation tools."
+
+  - name: "GBIF"
+    url: "https://www.gbif.org/"
+    advantages:
+      - "Focused on biodiversity data."
+      - "Global accessibility."
+      - "Supports large-scale data submissions."

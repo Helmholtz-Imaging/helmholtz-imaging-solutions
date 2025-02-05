@@ -1,0 +1,29 @@
+repositories:
+  - name: "Helmholtz Codebase"
+    url: "https://gitlab.hzdr.de/"
+    advantages:
+      - "Gitlab instance available for anyone with a Helmholtz Center Login."
+  - name: "GitLab"
+    url: "https://gitlab.com/"
+    advantages:
+      - "Built-in CI/CD pipelines."
+      - "Comprehensive project management."
+      - "Supports self-hosting."
+  - name: "GitHub"
+    url: "https://github.com/"
+    advantages:
+      - "Largest developer community."
+      - "Easy collaboration."
+      - "Integration with Zenodo for DOIs."
+  - name: "Zenodo"
+    url: "https://zenodo.org/"
+    advantages:
+      - "Free archival with DOI assignment."
+      - "Integrates with GitHub."
+      - "Open access to datasets and software."
+  - name: "SourceForge"
+    url: "https://sourceforge.net/"
+    advantages:
+      - "Established platform for open-source."
+      - "Project management tools."
+      - "Wide visibility for research projects."

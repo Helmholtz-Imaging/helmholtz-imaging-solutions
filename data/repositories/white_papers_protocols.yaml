@@ -1,0 +1,21 @@
+repositories:
+  - name: "arXiv"
+    url: "https://arxiv.org/"
+    advantages:
+      - "Widely recognized preprint server."
+      - "Covers multiple disciplines."
+      - "Fast dissemination of research."
+
+  - name: "bioRxiv"
+    url: "https://www.biorxiv.org/"
+    advantages:
+      - "Focused on biological sciences."
+      - "Enhances visibility within the biology community."
+      - "Rapid publication process."
+
+  - name: "protocols.io"
+    url: "https://www.protocols.io/"
+    advantages:
+      - "Specialized for research protocols."
+      - "Easy version control."
+      - "Community feedback and sharing."

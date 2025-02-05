@@ -1,0 +1,14 @@
+repositories:
+  - name: "OpenEI"
+    url: "https://openei.org/"
+    advantages:
+      - "Focused on renewable energy data."
+      - "Collaborative platform with community contributions."
+      - "Integration with energy modeling tools."
+
+  - name: "International Energy Agency (IEA) Data"
+    url: "https://www.iea.org/data-and-statistics"
+    advantages:
+      - "Comprehensive energy statistics."
+      - "High-quality data curation."
+      - "Facilitates policy-relevant research."

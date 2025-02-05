@@ -1,5 +1,38 @@
+{{- $category := .Get "category" -}}
+{{- $data := index .Site.Data.repositories $category "repositories" -}}
+
 <div class="repository-table">
-{{.Inner | markdownify}}
+
+{{- if not $data }}
+  <div class="repository-table-error">
+    <p>No repositories found for category: <strong>{{ $category }}</strong>.</p>
+  </div>
+{{- else }}
+  <div class="repository-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Repository</th>
+          <th>Advantages</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{- range $data }}
+          <tr>
+            <td><a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><strong>{{ .name }}</strong></a></td>
+            <td>
+              <ul>
+                {{- range .advantages }}
+                  <li>{{ . }}</li>
+                {{- end }}
+              </ul>
+            </td>
+          </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </div>
+{{- end }}
 </div>
 
 <style>
@@ -8,8 +41,16 @@
         border-collapse: collapse;
   }
 
+.repository-table thead {
+  display: none;
+}
+
 .repository-table tr {
   border-top: 1px solid #c1c1c3;
+}
+
+.repository-table li {
+  margin: 0;
 }
 
 .repository-table td:nth-child(1) {

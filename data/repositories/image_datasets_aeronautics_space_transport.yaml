@@ -1,0 +1,14 @@
+repositories:
+  - name: "NASA's Planetary Data System (PDS)"
+    url: "https://pds.nasa.gov/"
+    advantages:
+      - "Specialized for planetary science data."
+      - "Robust data archiving and curation."
+      - "Ensures data accessibility for future research."
+
+  - name: "OpenSky Network"
+    url: "https://opensky-network.org/"
+    advantages:
+      - "Specialized for aviation data."
+      - "Real-time and historical flight data."
+      - "Facilitates research in air traffic management and safety."

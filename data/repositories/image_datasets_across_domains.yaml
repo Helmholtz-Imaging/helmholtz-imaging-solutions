@@ -1,0 +1,42 @@
+repositories:
+  - name: "InfiniteSpace / dCache"
+    url: "https://hifis.net/doc/cloud-services/Storage_DESY/"
+    advantages:
+      - "Unlimited storage for projects within Helmholtz."
+      - "Access through Helmholtz ID."
+      - "Data HTTP - streamable."
+
+  - name: "Kaggle Datasets"
+    url: "https://www.kaggle.com/datasets"
+    advantages:
+      - "Diverse datasets across disciplines."
+      - "Active community and competitions."
+      - "User-friendly tools."
+
+  - name: "Open Science Framework (OSF)"
+    url: "https://osf.io/"
+    advantages:
+      - "Multidisciplinary support."
+      - "Collaboration and project management."
+      - "Promotes open access."
+
+  - name: "Open Images Dataset"
+    url: "https://storage.googleapis.com/openimages/web/index.html"
+    advantages:
+      - "Millions of annotated images."
+      - "Rich annotations (bounding boxes, segmentation)."
+      - "Regular updates."
+
+  - name: "Figshare"
+    url: "https://figshare.com/"
+    advantages:
+      - "Supports various data types."
+      - "Easy sharing with privacy options."
+      - "DOI for citation."
+
+  - name: "Zenodo"
+    url: "https://zenodo.org/"
+    advantages:
+      - "Free and open access."
+      - "GitHub integration."
+      - "Assigns DOIs for datasets."
