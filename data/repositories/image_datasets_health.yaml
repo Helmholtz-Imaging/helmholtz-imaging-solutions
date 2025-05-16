@@ -26,3 +26,10 @@ repositories:
       - "Focused on biological and medical research."
       - "Integrates with other EBI resources."
       - "Supports a wide range of data types."
+
+  - name: "IDR"
+    url: "https://idr.openmicroscopy.org/"
+    advantages:
+      - "Specialized in biological imaging data."
+      - "Provides rich metadata and experimental context."
+      - "Supports visualization and reuse of high-content imaging datasets."
