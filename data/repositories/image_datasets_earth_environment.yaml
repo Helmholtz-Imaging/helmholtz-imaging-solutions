@@ -19,3 +19,10 @@ repositories:
       - "Focused on biodiversity data."
       - "Global accessibility."
       - "Supports large-scale data submissions."
+
+  - name: "MorphoBank"
+    url: "https://morphobank.org/"
+    advantages:
+      - "Specialized in phenotypic and morphological data for evolutionary biology."
+      - "Supports collaborative, project-based data sharing and archiving."
+      - "Allows integration of images and phylogenetic matrices for systematics research."
