@@ -40,3 +40,17 @@ repositories:
       - "Free and open access."
       - "GitHub integration."
       - "Assigns DOIs for datasets."
+
+  - name: "FAIRsharing"
+    url: "https://fairsharing.org/"
+    advantages:
+      - "Curated registry of standards, databases, and data policies."
+      - "Supports FAIR data principles."
+      - "Helps researchers find appropriate data resources."
+  
+  - name: "re3data"
+    url: "https://www.re3data.org/"
+    advantages:
+      - "Comprehensive registry of research data repositories."
+      - "Covers various disciplines and repository types."
+      - "Provides standardized metadata for repository evaluation."
